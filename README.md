@@ -1,12 +1,13 @@
 # Bosch-Motors-Dataset
-This project is my master thesis and also a sub-project of the research project AgiProbot from KIT and Bosch. We develop a benchmark including 2D synthetic image datasets and 3D synthetic point cloud datasets, in which the key objects have multiple learn-able attributes with ground truth provided. In this project, small electric motors are used as the key objects. This part explains how to generate the datasets, including motor mesh model dataset, image dataset, point cloud dataset and noise point cloud dataset. We also build a synthetic clamping system with Blender to simulate the motor being clamped by the fixture in the real scenario.
+This project is my master thesis and also a sub-project of the research project AgiProbot from KIT and Bosch. We develop a benchmark including 2D synthetic image datasets and 3D synthetic point cloud datasets, in which the key objects have multiple learn-able attributes with ground truth provided. In this project, small electric motors are used as the key objects. This part explains how to generate the datasets, including motor mesh model dataset, image dataset, point cloud dataset and noise point cloud dataset. We also build a synthetic *clamping system* with Blender to simulate the motor being clamped by the fixture in the real scenario.
 ## Software Preparation
-As our programming is based on the python language, we recommend a [Python>=3.7.0](https://www.python.org/) environment, including [Numpy](https://numpy.org/)
-We use [Blender 2.9](https://www.blender.org/) to generate the synthetic motor mesh model with the addon named motor factory. For specific details including how to install, you can see [Motor Factory](https://github.com/cold-soda-jay/blenderMotorFactoryVer2.0). 
+As our programming is based on the python language, we recommend a [Python>=3.7.0](https://www.python.org/) environment, including [Numpy](https://numpy.org/) and [Matplotlib](https://matplotlib.org/).
+We use [Blender 2.9](https://www.blender.org/) to generate the synthetic motor mesh model with the addon named motor factory. For specific details including how to install, you can see [Motor Factory](https://github.com/cold-soda-jay/blenderMotorFactoryVer2.0).
+
 ### 1. Motor Mesh Model Dataset
-We generate 5 kinds of synthetic motor mesh with Blender addon in randomly different size ranges in each motor's parts. Run the Blender(version 2.9 above is recommended), open Text Editor(hotkey: Shift + F11) and open the script named synthetic_motor_generate.py. You should specify the path to save in BASE_DIR and the number of the motors in main() function.(In the demo, I generated 10 of each type of motor, 50 in total.) 
+We generate 5 kinds of synthetic motor mesh with Blender addon in randomly different size ranges in each motor's parts. Run the Blender(version 2.9 above is recommended), open Text Editor(hotkey: Shift + F11) and open the script named `synthetic_motor_generate.py`. You should specify the path to save in BASE_DIR and the number of the motors in main() function.(In the demo, I generated 10 of each type of motor, 50 in total.) Click "Run Script".
 ```python
-BASE_DIR = '/home/linxi/KIT/Thesis/Dataset/motor_mesh_model_50/'
+BASE_DIR = '/home/linxi/KIT/Thesis/Dataset/motor_mesh_model_50/' 
 num_motor_for_dataset=50
 ```
 ### 2. Image Dataset 
