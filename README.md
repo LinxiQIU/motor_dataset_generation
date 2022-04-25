@@ -24,10 +24,11 @@ blenderproc run try.py
 If you want to generate the dataset for the specified motor type, please run the script `batch_generation.py` and set the path of the motor type. 
 In each scene, we changed the position and euler rotation of the camera to increase the diversity of the scene. At the same time, we also randomly rotated the motor a little bit to simulate the improper placement of the motor in reality. This information will be saved in the csv file named camera_motor_setting.csv.
 ### 3. Point Cloud Dataset
-The point cloud dataset is composed of scene point cloud and cuboid point cloud. We use the corresponding camera information saved in the camera_motor_setting.csv to scan the scene in point cloud to maintain correspondence with the image dataset. In order to improve the deep learning efficiency, we cut out a cuboid with the motor as the center. 
-Run the Blensor,
-We mark the position of the motor in the point cloud scene with a 3D bounding box, and save the three-dimensional coordinates of the center of each motor and the length, width and height of the entire motor in motor_3D_bounding_box.csv for the deep learning task of 3D object detection. 
+The point cloud dataset is composed of scene and cuboid point cloud. We use the corresponding camera information saved in the camera_motor_setting.csv to scan the scene in point cloud to maintain correspondence with the image dataset. In order to improve the deep learning efficiency, we cut out a cuboid with the motor as the center. 
+> Run the Blensor, open the script `assemble_cut_win.py` in Text Editor, set up the csv_path, file_path, Clamping_path and save_path in the main() function.
 
-We provide each motor with both scene and cuboid point cloud in Numpy and PCD format. You can convert the generated Numpy file to PCD by running `points2pcd.py`
+> We mark the position of the motor in the point cloud scene with a 3D bounding box, and save the three-dimensional coordinates of the center of each motor and the length, width and height of the entire motor in motor_3D_bounding_box.csv for the deep learning task of 3D object detection by running `display.py`
+
+> We provide each motor with both scene and cuboid point cloud in Numpy and PCD format. You can convert the generated Numpy file to PCD by running `points2pcd.py`
 ### 4. Noise Point Cloud Dataset
 On the basis of the point cloud dataset in the previous step, We add more random noises to obtain data augmentation. For example, we add deflection at corners when cut the cubiod, 
