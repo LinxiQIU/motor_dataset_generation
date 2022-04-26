@@ -21,7 +21,8 @@ In the image dataset, we merge motors and clamping system to generate 5 images f
 ```python
 blenderproc run try.py 
 ```
-If you want to generate the dataset for the specified motor type, please run the script `batch_generation.py` and set the path of the motor type. 
+> If you want to generate the dataset for the specified motor type, please run the script `batch_generation.py` and set the path of the motor type.
+ 
 In each scene, we changed the position and euler rotation of the camera to increase the diversity of the scene. At the same time, we also randomly rotated the motor a little bit to simulate the improper placement of the motor in reality. This information will be saved in the csv file named camera_motor_setting.csv.
 ### 3. Point Cloud Dataset
 The point cloud dataset is composed of scene and cuboid point cloud. We use the corresponding camera information saved in the camera_motor_setting.csv to scan the scene in point cloud to maintain correspondence with the image dataset. In order to improve the deep learning efficiency, we cut out a cuboid with the motor as the center. 
@@ -31,4 +32,4 @@ The point cloud dataset is composed of scene and cuboid point cloud. We use the 
 
 > We provide each motor with both scene and cuboid point cloud in Numpy and PCD format. You can convert the generated Numpy file to PCD by running `points2pcd.py`
 ### 4. Noise Point Cloud Dataset
-On the basis of the point cloud dataset in the previous step, We add more random noises to obtain data augmentation. For example, we add deflection at corners when cut the cubiod, 
+On the basis of the point cloud dataset in the previous step, we add more random noises to obtain data augmentation. For example, we add a cover randomly above the motor. You can get the whole noise cuboid point cloud dataset by running `generate_noise_dataset.py`, the path setup is similar with the settings above.
