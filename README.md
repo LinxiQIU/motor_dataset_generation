@@ -32,4 +32,4 @@ The point cloud dataset is composed of scene and cuboid point cloud. We use the 
 
 > We provide each motor with both scene and cuboid point cloud in Numpy and PCD format. You can convert the generated Numpy file to PCD by running `points2pcd.py`
 ### 4. Noise Point Cloud Dataset
-On the basis of the point cloud dataset in the previous step, we add more random noises to obtain data augmentation. For example, we add a cover randomly above the motor. You can get the whole noise cuboid point cloud dataset by running `generate_noise_dataset.py`, the path setup is similar with the settings above.
+On the basis of the point cloud dataset in the previous step, we add more random noises to obtain data augmentation. For example, we add a cover randomly above the motor. You can get the whole noise cuboid point cloud dataset by running `generate_noise_dataset.py` in Blensor, the path setup is similar with the settings above.
