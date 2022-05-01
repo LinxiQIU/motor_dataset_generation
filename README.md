@@ -37,10 +37,10 @@ On the basis of the point cloud dataset in the previous step, we add more random
 ```python
 blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/output -clp path/of/clamping_system -ss(save scene) -sf(scene file format) -bb(3d bounding box) -sc(save cuboid) -cf(cuboid file format) -roim(rotation from image dataset) -csvp path/of/csv -n(number of generation)
 ```
-Description: 
-
-| -b   | run Blender in background mode                               |            |
+ 
+| cmd  | Description          | property |
 | ---  | ------------------------------------------------------------ | ---------- |
+| -b   | run Blender in background mode                               |            |
 | -P   | python script                                                |            |
 | -i   | path of motor mesh model                                     | obligatory |
 | -o   | path of save directory                                       | obligatory |
