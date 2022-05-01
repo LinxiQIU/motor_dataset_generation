@@ -50,8 +50,8 @@ blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/
 | -bb   | whether to save 3D bounding box of motor (default=True)    | boolean |  optional  |
 | -sc   | whether to save cuboid file (default=True)     | boolen | optional |
 | -cf   | cuboid file format, option: numpy, pcd, both (default: numpy)  | string | optional |
-|  -roim | Default=False: apply random rotation info and save. True: load rotation info from given csv file | boolen | optional |
-| -csvp | if -roim is False, save directory of rotation info.(Default is save directory) if -roim is True, path of given csv file | string | optional/obligatory |
+| -roim | default=False: apply random rotation info and save. True: load rotation info from given csv file | boolen | optional |
+| -csvp | if -roim is False, save directory of rotation info.(default is save directory). if -roim is True, path of given csv file | string | optional/obligatory |
 | -n | number of total generation (an integer multiple of 5)     | integer | obligatory  |
 
 If you want to modify the value of a boolean type of argument, just enter this cmd. Here is the example command for the demo.
