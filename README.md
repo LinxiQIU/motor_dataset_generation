@@ -38,13 +38,19 @@ On the basis of the point cloud dataset in the previous step, we add more random
 blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/output -clp path/of/clamping_system -ss(save scene) -sf(scene file format) -bb(3d bounding box) -sc(save cuboid) -cf(cuboid file format) -roim(rotation from image dataset) -csvp path/of/csv -n(number of generation)
 ```
  
-| cmd  | Description          | property |
-| ---  | ------------------------------------------------------------ | ---------- |
-| -b   | run Blender in background mode                               |            |
-| -P   | python script                                                |            |
-| -i   | path of motor mesh model                                     | obligatory |
-| -o   | path of save directory                                       | obligatory |
-| -clp | path of clamping system                                      | obligatory |
-| -ss  | whether to save scene file (default=True)                    | optinal    |
-| -sf  | scene file format, option: numpy, pcd, both (default: numpy) | optinal    |
-
+| cmd  | Description          | Type | Property |
+| ---  | ----------------------------------------------------------| --- | ---------- |
+| -b   | run Blender in background mode                        |       |            |
+| -P   | python script                                          |      |            |
+| -i   | path of motor mesh model                                | string     | obligatory |
+| -o   | path of save directory                                  | string     | obligatory |
+| -clp | path of clamping system                                 | string     | obligatory |
+| -ss  | whether to save scene file (default=True)               | boolean    | optional   |
+| -sf  | scene file format, option: numpy, pcd, both (default: numpy)  | string | optional |
+| -bb  | whether to save 3D bounding box of motor (default=True)    | boolean |  optional  |
+| -sc  | whether to save cuboid file (default=True)     | boolen | optional |
+| -cf  | cuboid file format, option: numpy, pcd, both (default: numpy)  | string | optional |
+| -roim | (default=False: apply random rotation matrices and save), True: load rotation matrics from given csv file | boolen | optional |
+| -csvp | if -roim is False, save directory of rotation info.(default is save directory) if -roim is True, path of given csv file | string | optional/obligatory |
+If you want to modify the value of a boolean type of argument, just enter this cmd. Here is the example command for my task.
+![](https://github.com/LinxiQIU/Bosch-Motors-Dataset-generate/blob/main/Blensor_cmd.png)
