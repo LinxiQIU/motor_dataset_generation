@@ -32,4 +32,16 @@ The point cloud dataset is composed of scene and cuboid point cloud. We use the 
 
 > We provide each motor with both scene and cuboid point cloud in Numpy and PCD format. You can convert the generated Numpy file to PCD by running `points2pcd.py`
 ### 4. Noise Point Cloud Dataset
-On the basis of the point cloud dataset in the previous step, we add more random noises to obtain data augmentation. For example, we add a cover randomly above the motor. You can get the whole noise cuboid point cloud dataset by running `generate_noise_dataset.py` in Blensor, the path setup is similar with the settings above.
+On the basis of the point cloud dataset in the previous step, we add more random noises to obtain data augmentation. For example, we add a cover randomly above the motor. You can get the whole noise cuboid point cloud dataset by running `generate_noise_dataset.py` with Blensor.
+> open 'Command Prompt' in Windows, change to the Blensor directory and type in following command:
+```python
+blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/output -clp path/of/clamping_system -ss(save scene) -sf(scene file format) -bb(3d bounding box) -sc(save cuboid) -cf(cuboid file format) -roim(rotation from image dataset) -csvp path/of/csv -n(number of generation)
+```
+Description: 
+| -b   | run Blender in background mode               |            |
+| -P   | python script                                |            |
+| -i   | path of motor mesh model                     | obligatory |
+| -o   | path of save directory                       | obligatory |
+| -clp | path of clamping system                      | obligatory |
+| -ss  | whether to save scene file (default=True)    | optinal    |
+| -sf  | scene file format, option: numpy, pcd, both (default: numpy) | optinal |
