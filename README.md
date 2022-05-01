@@ -52,5 +52,6 @@ blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/
 | -cf  | cuboid file format, option: numpy, pcd, both (default: numpy)  | string | optional |
 | -roim | (default=False: apply random rotation matrices and save), True: load rotation matrics from given csv file | boolen | optional |
 | -csvp | if -roim is False, save directory of rotation info.(default is save directory) if -roim is True, path of given csv file | string | optional/obligatory |
+
 If you want to modify the value of a boolean type of argument, just enter this cmd. Here is the example command for my task.
 ![](https://github.com/LinxiQIU/Bosch-Motors-Dataset-generate/blob/main/Blensor_cmd.png)
