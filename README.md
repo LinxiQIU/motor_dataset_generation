@@ -39,11 +39,12 @@ blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/
 ```
 Description: 
 
-| -b   | run Blender in background mode               |            |
-| -P   | python script                                |            |
-| -i   | path of motor mesh model                     | obligatory |
-| -o   | path of save directory                       | obligatory |
-| -clp | path of clamping system                      | obligatory |
-| -ss  | whether to save scene file (default=True)    | optinal    |
-| -sf  | scene file format, option: numpy, pcd, both (default: numpy) | optinal |
+| -b   | run Blender in background mode                               |            |
+| ---  | ------------------------------------------------------------ | ---------- |
+| -P   | python script                                                |            |
+| -i   | path of motor mesh model                                     | obligatory |
+| -o   | path of save directory                                       | obligatory |
+| -clp | path of clamping system                                      | obligatory |
+| -ss  | whether to save scene file (default=True)                    | optinal    |
+| -sf  | scene file format, option: numpy, pcd, both (default: numpy) | optinal    |
 
