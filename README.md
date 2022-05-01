@@ -39,7 +39,7 @@ blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/
 ```
  
 | cmd  | Description          | Type | Property |
-| ---  | ----------------------------------------------------------| --- | ---------- |
+| -----  | ----------------------------------------------------------| --- | ---------- |
 | -b   | run Blender in background mode                        |       |            |
 | -P   | python script                                          |      |            |
 | -i   | path of motor mesh model                                | string     | obligatory |
