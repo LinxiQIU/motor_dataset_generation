@@ -54,4 +54,4 @@ blender -b -P path/of/augmented_pc_generation.py -- -i path/of/input -o path/of/
 | -csvp | if -roim is False, save directory of rotation info.(default is save directory) if -roim is True, path of given csv file | string | optional/obligatory |
 
 If you want to modify the value of a boolean type of argument, just enter this cmd. Here is the example command for my task.
-![](https://github.com/LinxiQIU/Bosch-Motors-Dataset-generate/blob/main/Blensor_cmd.png)
+![](https://github.com/LinxiQIU/Bosch-Motors-Dataset-generate/blob/main/blensor_cmd.png)
